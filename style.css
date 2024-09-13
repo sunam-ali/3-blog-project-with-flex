@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    padding: 2rem;
+}
+.header_container{
+    margin-bottom: 2.8rem;
+    text-align: center;
+}
+.header_tittle{
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.header_description{
+    max-width: 568px;
+    margin: 0 auto;
+}
+.card_container{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1,1fr);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(224, 217, 217);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card:hover .card_img{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+.card_img_container{
+    position: relative;
+    overflow: hidden;
+    height: 14rem;
+}
+.card_img{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.card_tittle_container{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.card_tittle{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(29, 27, 27);
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+.card_tittle:hover{
+    color: rgb(59, 59, 177);
+}
+.card_description{
+    color: rgb(114, 96, 96);
+    font-size: 1rem;
+}
+.card_footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+.author_container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.author_avatar_container{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(190, 182, 182);
+    border-radius: 50%;
+    background-color: rgb(223, 204, 204);
+}
+.author_info_container{
+    display: flex;
+    flex-direction: column;
+}
+.author_name{
+    color: blue;
+}
+.author_date{
+    color: rgb(114, 96, 96);
+}
+.card_tag_container{
+    font-size: 0.9rem;
+    color: rgb(114, 96, 96);
+    border: 1px solid rgb(114, 96, 96);
+    border-radius: 2px;
+    line-height: 1.3rem;
+    padding: 0.25rem;
+}
+@media (min-width: 850px) {
+    .card_container{
+    grid-template-columns: repeat(2,1fr);
+}
+    .container{
+        max-width: 75vw;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 1420px) {
+    .card_container{
+    grid-template-columns: repeat(3,1fr);
+}
+    .container{
+        max-width: 75vw;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 1850px) {
+    .card_container{
+    grid-template-columns: repeat(4,1fr);
+}
+    .container{
+        max-width: 75vw;
+        margin: 0 auto;
+    }
+}
